@@ -87,14 +87,6 @@ git add .gitmodules
 git commit -m "Atualiza URL do submódulo"
 
 
-
-
-
-
-
-
-
-
 **************clone
 git clone --recurse-submodules https://github.com
 **************criar submodule local
