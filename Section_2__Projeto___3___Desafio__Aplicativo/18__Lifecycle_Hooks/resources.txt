@@ -1,0 +1,2 @@
+Lifecycle Diagram
+https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram
