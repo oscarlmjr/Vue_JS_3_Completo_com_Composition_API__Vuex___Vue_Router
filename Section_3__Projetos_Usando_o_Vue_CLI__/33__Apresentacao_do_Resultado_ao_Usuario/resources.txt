@@ -1,0 +1,2 @@
+UTF-8 Dingbats
+https://www.w3schools.com/CHARSETS/ref_utf_dingbats.asp
