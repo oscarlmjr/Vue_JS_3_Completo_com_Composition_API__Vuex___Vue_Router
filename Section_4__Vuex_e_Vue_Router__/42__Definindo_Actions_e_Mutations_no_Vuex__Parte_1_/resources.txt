@@ -1,0 +1,5 @@
+Vuex
+https://vuex.vuejs.org/#what-is-a-state-management-pattern
+
+Dispatching Actions
+https://vuex.vuejs.org/guide/actions.html#dispatching-actions
