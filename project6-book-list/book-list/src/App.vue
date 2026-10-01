@@ -1,8 +1,9 @@
 <script setup>
-
+import { reactive } from 'vue';
 import BooksView from './components/BooksView.vue';
+import BookProgress from './components/BookProgress.vue';
 
-let books = [
+let books = reactive ([
         {
           id: 1,
           title: "History of Europe",
@@ -25,7 +26,7 @@ let books = [
           id: 3,
           title: "Becoming",
           cover:
-            "https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-7-540x861.jpg",
+            "https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-3-540x861.jpg",
           isRead: false,
           isbn: "0-395-07157-8",
           author: "Daniel Trejo",
@@ -39,7 +40,15 @@ let books = [
           isbn: "0-395-07157-8",
           author: "Daniel Trejo",
         },
-      ];
+      ]);
+
+function toggleIsRead (id) {
+ books.forEach((book) => {
+  if (book.id === id) {
+    book.isRead = !book.isRead;
+  }
+ });
+}
 
 </script>
 
@@ -49,7 +58,7 @@ let books = [
     <div class="header-btns">
       <button
         class="btn"
-        
+
       >
         Adicionar Livro +
       </button>
@@ -58,7 +67,10 @@ let books = [
       </button>
     </div>
     <div class="books-container">
-      <BooksView :books="books"/>
+
+      <BooksView @toggleIsRead="toggleIsRead" :books="books"/>
+      <BookProgress :books="books"/>
+
     </div>
   </div>
 </template>
